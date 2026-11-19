@@ -1,0 +1,34 @@
+=== INDEX.HTML में 3 बदलाव (पुराना कुछ हटाना नहीं है) ===
+
+[A] navbar में: <a href="#contact" class="nav-link" ...>Contact</a> से ठीक पहले यह लाइन जोड़ें:
+      <a href="wedding-invitations.html" class="nav-link" data-cursor="OPEN">Wedding</a>
+    (नोट: script.js का nav-scroll कोड सिर्फ #sections देखता है, इसलिए ऐसा बाहरी link पूरी तरह safe नहीं है।
+     नीचे [A-fix] देखें।)
+
+[A-fix] script.js में initNav() के अंदर यह एक लाइन बदलें:
+      const links = $$('.nav-link');
+    को:
+      const links = $$('.nav-link[href^="#"]');
+
+[B] <section class="portfolio" id="work"> से ठीक पहले यह पूरा section जोड़ें:
+
+  <!-- ============ WEDDING INVITATIONS TEASER ============ -->
+  <section class="wedding-teaser" id="wedding" data-cursor-section="WEDDING">
+    <div class="section-inner wt-grid">
+      <a class="wt-preview" href="wedding-invitations.html" data-cursor="OPEN" aria-label="Open wedding invitations portfolio">
+        <span class="wt-card">
+          <small>With the blessings of our families</small>
+          <strong>Aarav &amp; Meera</strong>
+          <em>Shubh Vivah</em>
+        </span>
+      </a>
+      <div class="wt-copy">
+        <p class="section-tag">New</p>
+        <h2 class="section-heading">Wedding Invitations</h2>
+        <p class="wt-text">Beautiful Wedding Invitations &amp; Premium Digital Wedding Websites</p>
+        <a href="wedding-invitations.html" class="btn btn-solid" data-cursor="OPEN">Explore Wedding Invitations</a>
+      </div>
+    </div>
+  </section>
+
+[C] style.css के सबसे अंत में wedding-teaser.css की पूरी सामग्री paste करें।

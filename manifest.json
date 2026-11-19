@@ -1,0 +1,22 @@
+{
+    "name": "Mohit Sharma Portfolio",
+    "short_name": "Mohit Sharma",
+    "description": "Mohit Sharma - Graphic Designer & Web Designer",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0c0c0f",
+    "theme_color": "#7c5cff",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/images/ms-icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/ms-icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
